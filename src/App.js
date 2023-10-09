@@ -10,16 +10,16 @@ import './App.css';
 import { useStateContext } from './context/ContextProvider';
 
 const App = () => {
-  const {  setCurrentMode, currentMode, activeMenu, currentColor, themeSettings, setThemeSettings } = useStateContext();
+  const {  setCurrentMode, currentMode, activeMenu, currentColor,setCurrentColor, themeSettings, setThemeSettings } = useStateContext();
 
-//   useEffect(() => {
-//     const currentThemeColor = localStorage.getItem('colorMode');
-//     const currentThemeMode = localStorage.getItem('themeMode');
-//     if (currentThemeColor && currentThemeMode) {
-//       setCurrentColor(currentThemeColor);
-//       setCurrentMode(currentThemeMode);
-//     }
-//   }, []);
+  useEffect(() => {
+    const currentThemeColor = localStorage.getItem('colorMode');
+    const currentThemeMode = localStorage.getItem('themeMode');
+    if (currentThemeColor && currentThemeMode) {
+      setCurrentColor(currentThemeColor);
+      setCurrentMode(currentThemeMode);
+    }
+  }, []);
 
   return (
     <div className={currentMode === 'Dark' ? 'dark' : ''}>
