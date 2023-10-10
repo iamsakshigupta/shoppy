@@ -15,7 +15,7 @@ const ECommerce = () => {
           <div className='flex justify-between items-center'>
             <div>
               <p className='font-bold text-gray-400'>Earnings</p>
-              <p className='text-2xl'>$63,448.78</p>
+              <p className='text-2xl text-gray-900'>$63,448.78</p>
             </div>
           </div>
           <div className='mt-6'>
@@ -36,17 +36,17 @@ const ECommerce = () => {
       </div>
       <div className='flex flex-wrap m-3 justify-center gap-1 items-center'>
         {earningData.map((item) => (
-          <div key={item.title} className='bg-white dark:bg-text-gray-200 dark:bg-secondarydark-bg md:w-56 p-4 pt-9 rounded-2xl'>
+          <div key={item.title} className='bg-white dark:bg-text-gray-200 dark:bg-secondary-dark-bg md:w-56 p-4 pt-9 rounded-2xl'>
             <button type='button' style={{ color: item.iconColor, backgroundColor: item.iconBg }}
               className='text-2xl opacity-0.9 rounded-full p-4 hover:drop-shadow-xl'
             >
               {item.icon}
             </button>
             <p className='mt-3'>
-              <span className='text-lg font-semibold'>
+              <span className='text-lg font-semibold dark:text-white'>
                 {item.amount}
               </span>
-              <span className={`text-sm text-${item.pcColor} ml-2`}>
+              <span className={`text-sm text-${item.pcColor} dark:text-gray-400 ml-2`}>
                 {item.percentage}
               </span>
             </p>
@@ -61,7 +61,7 @@ const ECommerce = () => {
               Revenue Updates
             </p>
             <div className='flex items-center gap-4'>
-              <p className='flex items-center gap-2 text-gray-600 hover:drop-shadow-xl'>
+              <p className='flex items-center gap-2 text-gray-600 dark:text-white hover:drop-shadow-xl'>
                 <span>
                   <GoDotFill />
                 </span>
@@ -101,6 +101,8 @@ const ECommerce = () => {
                   width='250px'
                   data={SparklineAreaData}
                   color={currentColor}
+                  bgColor='black'
+
 
                 />
               </div>

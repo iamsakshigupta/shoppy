@@ -530,30 +530,7 @@ export const links = [
         icon: <AiOutlineAreaChart />,
       },
 
-      {
-        name: 'bar',
-        icon: <AiOutlineBarChart />,
-      },
-      {
-        name: 'pie',
-        icon: <FiPieChart />,
-      },
-      {
-        name: 'financial',
-        icon: <RiStockLine />,
-      },
-      {
-        name: 'color-mapping',
-        icon: <BsBarChart />,
-      },
-      {
-        name: 'pyramid',
-        icon: <GiLouvrePyramid />,
-      },
-      {
-        name: 'stacked',
-        icon: <AiOutlineBarChart />,
-      },
+      
     ],
   },
 ];
@@ -3098,7 +3075,10 @@ export const lineCustomSeries = [
     name: 'Germany',
     width: '2',
     marker: { visible: true, width: 10, height: 10 },
-    type: 'Line' },
+    type: 'Line',
+     
+  },
+    
 
   { dataSource: lineChartData[1],
     xName: 'x',
